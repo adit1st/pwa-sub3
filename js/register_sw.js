@@ -2,7 +2,9 @@
      console.log("Service worker tidak didukung browser ini.");
  } else {
      registerServiceWorker();
-     requestPermission();
+     navigator.serviceWorker.ready.then(() => {
+         requestPermission();
+     })
  }
  // Register service worker
  function registerServiceWorker() {

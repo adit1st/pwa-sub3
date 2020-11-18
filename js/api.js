@@ -149,7 +149,7 @@ function getSavedTeams() {
               </a>
               <div class="card-content">
                 <span class="card-title truncate">${team.name}</span>
-                 <button style="float:right;" id="${team.id}" class="removeButton btn">Remove</button>
+                 <button onclick="M.toast({html: 'Team Dihapus dari Favorit'})" style="float:right;" id="${team.id}" class="removeButton btn">Remove</button>
               </div>
               <br>
             </div>

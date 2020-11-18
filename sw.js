@@ -38,7 +38,10 @@ workbox.precaching.precacheAndRoute([
   { url: "/images/logofootball128.png", revision: "1" },
   { url: "https://fonts.googleapis.com/icon?family=Material+Icons", revision: "1" },
   { url: "https://unpkg.com/snarkdown@1.0.2/dist/snarkdown.umd.js", revision: "1" },
-]);
+],
+{
+  ignoreUrlParametersMatching: [/.*/],
+});
 
 workbox.routing.registerRoute(
   new RegExp('https://api.football-data.org/v2/'),

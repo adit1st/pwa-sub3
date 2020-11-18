@@ -13,7 +13,7 @@ saveForLater = (team) => {
       const tx = db.transaction("teams", "readwrite");
       const store = tx.objectStore("teams");
       console.log(team);
-      store.add(team);
+      store.put(team);
       return tx.complete;
     })
     .then(() => {
